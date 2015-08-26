@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
-
-
+@interface ViewController : NSViewController <NSTextDelegate, NSTableViewDataSource>
+@property (unsafe_unretained) IBOutlet NSTextView *commandTextView;
+@property (strong) IBOutlet NSArrayController *arrayController;
 @end
 
